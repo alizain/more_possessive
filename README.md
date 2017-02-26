@@ -10,7 +10,7 @@ Rails gem that lets you get a possessive form of a string. Supports localization
 ## Install
 
     # Gemfile
-    gem "possessive" 
+    gem "more_possessive"
 
 ## Localization
 
@@ -23,7 +23,7 @@ Sample configuration for German:
     end
 
 ## Note on Patches/Pull Requests
- 
+
 * Fork the project.
 * Make your feature addition or bug fix.
 * Add tests for it. This is important so I don't break it in a future version unintentionally.
@@ -32,4 +32,4 @@ Sample configuration for German:
 
 ## Copyright
 
-Copyright (c) 2014 Brian Clubb, Robert Wünsch. See LICENSE for details.
+Copyright (c) 2017 Brian Clubb, Robert Wünsch, Alizain Feerasta. See LICENSE for details.

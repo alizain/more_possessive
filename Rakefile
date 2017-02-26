@@ -4,11 +4,11 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "possessive"
+    gem.name = "more_possessive"
     gem.summary = "Rails plugin that lets you get a possessive form of a string for use on sites"
     gem.description = "Rails plugin that lets you get a possessive form of a string for use on sites"
-    gem.email = "bclubb@gmail.com"
-    gem.homepage = "http://github.com/bclubb/possessive"
+    gem.email = "alizain.feerasta@gmail.com"
+    gem.homepage = "http://github.com/alizain/more_possessive"
     gem.authors = ["Brian Clubb", "Jamie Flournoy", "Nick Howard"]
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
@@ -46,6 +46,6 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "possessive #{version}"
+  rdoc.title = "more_possessive #{version}"
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

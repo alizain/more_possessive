@@ -76,9 +76,9 @@ class InflectorTest < Test::Unit::TestCase
   # there are module functions that access Possessive::Inflector.inflections,
   # so we need to replace the singleton itself.
   def with_dup
-      original = Possessive::Inflector::Inflections.instance_variable_get(:@__instance__)
-      Possessive::Inflector::Inflections.instance_variable_set(:@__instance__, original.dup)
-    ensure
-      Possessive::Inflector::Inflections.instance_variable_set(:@__instance__, original)
-    end
+    original = Possessive::Inflector::Inflections.instance_variable_get(:@__instance__)
+    Possessive::Inflector::Inflections.instance_variable_set(:@__instance__, original.dup)
+  ensure
+    Possessive::Inflector::Inflections.instance_variable_set(:@__instance__, original)
+  end
 end
