@@ -1,5 +1,5 @@
 # Inspired by ActiveSupport::Inflector
-module Possessive
+module MorePossessive
   module Inflector
     extend self
 

@@ -33,7 +33,7 @@ class InflectorTest < Test::Unit::TestCase
   end
 
   test "Possessive with localization" do
-    Possessive::Inflector.inflections(:de) do |inflect|
+    MorePossessive::Inflector.inflections(:de) do |inflect|
       inflect.possessive /$/, 's'
       inflect.possessive /(s|x|z)$/i, '\1’'
     end
@@ -50,15 +50,15 @@ class InflectorTest < Test::Unit::TestCase
     assert_equal('Fuchs’', 'Fuchs'.possessive(:de))
     assert_equal('Fuchs’', 'Fuchs'.possessive)
 
-    Possessive::Inflector.inflections(:de) { |inflect| inflect.clear }
+    MorePossessive::Inflector.inflections(:de) { |inflect| inflect.clear }
 
-    assert Possessive::Inflector.inflections(:de).possessives.empty?
-    assert !Possessive::Inflector.inflections.possessives.empty?
+    assert MorePossessive::Inflector.inflections(:de).possessives.empty?
+    assert !MorePossessive::Inflector.inflections.possessives.empty?
   end
 
   test "clear rules" do
     with_dup do
-      Possessive::Inflector.inflections do |inflect|
+      MorePossessive::Inflector.inflections do |inflect|
         # ensure any data is present
         inflect.possessive(/$/, '’s')
 
@@ -73,12 +73,12 @@ class InflectorTest < Test::Unit::TestCase
   # Use this in tests what modify the state of the singleton.
   #
   # This helper is implemented by setting @__instance__ because in some tests
-  # there are module functions that access Possessive::Inflector.inflections,
+  # there are module functions that access MorePossessive::Inflector.inflections,
   # so we need to replace the singleton itself.
   def with_dup
-    original = Possessive::Inflector::Inflections.instance_variable_get(:@__instance__)
-    Possessive::Inflector::Inflections.instance_variable_set(:@__instance__, original.dup)
+    original = MorePossessive::Inflector::Inflections.instance_variable_get(:@__instance__)
+    MorePossessive::Inflector::Inflections.instance_variable_set(:@__instance__, original.dup)
   ensure
-    Possessive::Inflector::Inflections.instance_variable_set(:@__instance__, original)
+    MorePossessive::Inflector::Inflections.instance_variable_set(:@__instance__, original)
   end
 end

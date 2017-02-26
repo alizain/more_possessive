@@ -1,1 +1,1 @@
-require "possessive"
+require 'more_possessive'

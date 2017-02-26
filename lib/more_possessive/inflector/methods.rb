@@ -1,5 +1,5 @@
 # Inspired by ActiveSupport::Inflector
-module Possessive
+module MorePossessive
   # The Inflector transforms words into their possessive form.
   # The default inflections for possessive form are kept in inflections.rb.
   module Inflector
