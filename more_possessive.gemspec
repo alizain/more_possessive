@@ -29,7 +29,7 @@ Gem::Specification.new do |s|
     "lib/possessive/inflections.rb",
     "lib/possessive/inflector/inflections.rb",
     "lib/possessive/inflector/methods.rb",
-    "possessive.gemspec",
+    "more_possessive.gemspec",
     "rails/init.rb",
     "test/helper.rb",
     "test/test_possessive.rb"
@@ -38,4 +38,3 @@ Gem::Specification.new do |s|
   s.rubygems_version = "2.6.4".freeze
   s.summary = "Rails plugin that lets you get a possessive form of a string for use on sites".freeze
 end
-
